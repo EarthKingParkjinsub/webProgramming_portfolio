@@ -400,6 +400,105 @@
 			font-size: 0.94rem;
 		}
 
+		.roadmap-grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 24px;
+		}
+
+		.roadmap-card {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.roadmap-card::before {
+			content: "";
+			position: absolute;
+			top: -90px;
+			right: -90px;
+			width: 180px;
+			height: 180px;
+			border-radius: 50%;
+			background: rgba(56, 189, 248, 0.13);
+		}
+
+		.roadmap-icon {
+			position: relative;
+			width: 58px;
+			height: 58px;
+			display: grid;
+			place-items: center;
+			margin-bottom: 18px;
+			border-radius: 20px;
+			background: linear-gradient(135deg, rgba(56, 189, 248, 0.24), rgba(167, 139, 250, 0.22));
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			font-size: 1.7rem;
+		}
+
+		.roadmap-label {
+			position: relative;
+			color: var(--primary);
+			font-size: 0.82rem;
+			font-weight: 800;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			margin-bottom: 8px;
+		}
+
+		.roadmap-card h3 {
+			position: relative;
+			font-size: 1.35rem;
+			letter-spacing: -0.035em;
+			margin-bottom: 18px;
+		}
+
+		.check-list {
+			position: relative;
+			display: grid;
+			gap: 12px;
+		}
+
+		.check-list li {
+			position: relative;
+			padding-left: 28px;
+			color: var(--muted);
+		}
+
+		.check-list li::before {
+			content: "✓";
+			position: absolute;
+			left: 0;
+			top: 0;
+			color: var(--success);
+			font-weight: 900;
+		}
+
+		.semester-list {
+			position: relative;
+			display: grid;
+			gap: 14px;
+		}
+
+		.semester-item {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 16px;
+			padding: 16px;
+			border-radius: 18px;
+			background: rgba(15, 23, 42, 0.55);
+			border: 1px solid rgba(255, 255, 255, 0.09);
+		}
+
+		.semester-item strong {
+			color: var(--text);
+		}
+
+		.semester-item span {
+			color: var(--muted);
+			font-size: 0.94rem;
+		}
+
 		.projects-grid {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
@@ -579,6 +678,7 @@
 
 			.hero-grid,
 			.about-grid,
+			.roadmap-grid,
 			.contact-wrap {
 				grid-template-columns: 1fr;
 			}
@@ -622,6 +722,11 @@
 			.skills-grid,
 			.form-row {
 				grid-template-columns: 1fr;
+			}
+
+			.semester-item {
+				align-items: flex-start;
+				flex-direction: column;
 			}
 
 			section {
